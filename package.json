@@ -25,7 +25,8 @@
     "build": "cross-env NODE_ENV=production webpack --progress --mode production",
     "minify": "cross-env NODE_ENV=production MINIMIZE=true webpack --progress --mode production",
     "compile": "babel -d lib/ src/",
-    "prepare": "npm run compile && npm run build && npm run minify && npm run dtsg",
+    "prepare": "npm run compile && npm run build && npm run minify",
+    "prepublishOnly": "npm run dtsg",
     "watch": "babel --watch -d lib/ src/"
   },
   "author": "fchasen@gmail.com",
